@@ -480,6 +480,7 @@ main{position:relative}
 .cbar.sel rect{stroke:var(--navy);stroke-width:2}
 .cyr{font-family:var(--mono);font-weight:500;font-size:11.5px;fill:var(--softer);letter-spacing:.04em}
 .cval{font-family:var(--num);font-weight:700;font-size:13.5px;fill:var(--navy);font-variant-numeric:lining-nums tabular-nums}
+.cval.inbar{fill:#3B2A06}
 .cline{fill:none;stroke:var(--ox);stroke-width:3;stroke-linecap:round}
 .cdot{fill:var(--ox)}
 .cgrid{stroke:var(--rule-2);stroke-width:1}
@@ -1213,20 +1214,20 @@ button.mg{background:none;border:0;padding:0;font:inherit;text-align:left;
    to stay legible. Roughly 95% of traffic arrives by QR.
    ============================================================ */
 @media (max-width:640px){
-  .blab{font-size:17px;letter-spacing:.06em}
-  .bval{font-size:25px}
-  .baxis{font-size:16px}
-  .cval{font-size:21px}
-  .cyr{font-size:18px}
-  .tval{font-size:21px}
-  .tyr{font-size:17px}
-  .opt{font-size:14px;letter-spacing:.08em}
-  .opy{font-size:14px}
+  .blab{font-size:22px;letter-spacing:.04em}
+  .bval{font-size:30px}
+  .baxis{font-size:24px}
+  .cval{font-size:27px}
+  .cyr{font-size:24px}
+  .tval{font-size:27px}
+  .tyr{font-size:24px}
+  .opt{font-size:20px;letter-spacing:.06em}
+  .opy{font-size:20px}
 }
 @media (max-width:420px){
-  .blab{font-size:19px}
-  .bval{font-size:28px}
-  .baxis{font-size:18px}
+  .blab{font-size:24px}
+  .bval{font-size:32px}
+  .baxis{font-size:26px}
 }
 
 /* ============================================================
@@ -1432,7 +1433,7 @@ button.mg{background:none;border:0;padding:0;font:inherit;text-align:left;
   <div class="shell">
     <p class="hero-k">Prepared for SCH Services, LLC</p>
     <h1>We hope the party was great, but what if your benefits could be <em>a piece of cake</em>, too?</h1>
-    <p class="hero-p">We pulled both filed years of your own benefits data and put your cost trend next to the market's. You are climbing faster than the market, and most of that gap is addressable.</p>
+    <p class="hero-p">We pulled both reported years of your own plan data and put your cost trend next to the market's. You are climbing faster than the market, and most of that gap is addressable.</p>
 
     <!-- =====================================================
          VIDEO SLOT — removed 1 Sep. The 90 second explainer was cut
@@ -1450,7 +1451,7 @@ button.mg{background:none;border:0;padding:0;font:inherit;text-align:left;
          90-second animation is ready. Nothing depends on it.
          ===================================================== -->
     <div id="hook">
-      <p class="hook-k">Medical cost per employee, filed 2024 to 2025, projected to 2027</p>
+      <p class="hook-k">Medical cost per employee, 2024 to 2025, projected to 2027</p>
       <p class="hook-h">Your medical cost is rising faster than the market's, and the gap widens every year you hold that pace.</p>
       <div class="bell dark">
         <svg viewBox="0 0 760 380" id="bellSvg" role="img" aria-label="Your cost per participant rising faster than the market trend applied to the same starting point">
@@ -1461,7 +1462,7 @@ button.mg{background:none;border:0;padding:0;font:inherit;text-align:left;
           <span class="bkey-i"><i class="sw sw-avg"></i><span>The market, <b id="bkAvg"></b> over the same year. Up 5.0%, and carried forward at that rate.</span></span>
         </div>
       </div>
-      <p class="hook-note">Your figures, from your own Form 5500 and Schedule A filings for the two plan years 2024 and 2025. Medical contract premium divided by enrolled employees. Your plan took effect 1 January 2024, so two years is the whole filed record. The market line starts at your own 2024 figure and applies the national rate of change, per the KFF Employer Health Benefits Survey. Everything to the right of the 2025 rule is a projection, not a filed figure: it carries each line forward at its own rate with headcount held at 120, and it is drawn dashed with hollow markers for that reason. It is what happens if nothing changes, not a forecast of what will.</p>
+      <p class="hook-note">Your figures, from your own reported plan data for the two plan years 2024 and 2025. Medical contract premium divided by enrolled employees. Your plan took effect 1 January 2024, so two years is the whole reported record. The market line starts at your own 2024 figure and applies the national rate of change, per the KFF Employer Health Benefits Survey. Everything to the right of the 2025 rule is a projection rather than a reported figure: it carries each line forward at its own rate with headcount held at 120, and it is drawn dashed with hollow markers for that reason. It is what happens if nothing changes, not a forecast of what will.</p>
     </div>
 
     <p class="stamp">
@@ -1506,7 +1507,7 @@ button.mg{background:none;border:0;padding:0;font:inherit;text-align:left;
           </div>
         </div>
         <div class="op-viz">
-          <svg viewBox="0 0 460 190" role="img" aria-label="Cost per participant against people covered, across the filed plan years">
+          <svg viewBox="0 0 460 190" role="img" aria-label="Cost per participant against people covered, across the reported plan years">
             <g id="opChart"></g>
           </svg>
         </div>
@@ -1552,7 +1553,7 @@ button.mg{background:none;border:0;padding:0;font:inherit;text-align:left;
       <div class="fact">
         <p class="fact-k">Funding</p>
         <p class="fact-v" style="font-size:clamp(22px,2.6vw,28px)">Fully<br>insured</p>
-        <p class="fact-n">both filed years, 2024&ndash;2025</p>
+        <p class="fact-n">both reported years, 2024&ndash;2025</p>
       </div>
     </div>
   </div>
@@ -1578,12 +1579,12 @@ button.mg{background:none;border:0;padding:0;font:inherit;text-align:left;
     <div class="mv rv">
       <p class="mv-no">The trend</p>
       <h2>Five more people. <em>Thirteen percent more premium.</em></h2>
-      <p class="lede">Between 2024 and last year you added five covered employees, 4.3%, and paid $161,932 more on the medical line, 13.0%. That is three times the rate, and it is drawn entirely from your own filings.</p>
+      <p class="lede">Between 2024 and last year you added five covered employees, 4.3%, and paid $161,932 more on the medical line, 13.0%. That is three times the rate, and it is drawn entirely from your own plan data.</p>
     </div>
 
     <div class="cresc rv">
       <div class="cresc-wrap">
-        <svg viewBox="0 0 760 320" role="img" aria-label="Reported premium and covered participants, across the filed plan years">
+        <svg viewBox="0 0 760 382" role="img" aria-label="Reported premium and covered participants, across the reported plan years">
           <g id="chart"></g>
         </svg>
         <div class="cresc-legend">
@@ -1594,7 +1595,7 @@ button.mg{background:none;border:0;padding:0;font:inherit;text-align:left;
       </div>
       <div class="cresc-read" id="read"></div>
     </div>
-    <p class="src rv">Source: your own reported benefit figures, trended across your filed plan years. Premium per participant is reported premium divided by active participants at the end of the same year.</p>
+    <p class="src rv">Source: your own reported benefit figures, trended across your reported plan years. Premium per participant is reported premium divided by active participants at the end of the same year.</p>
 
   </div>
 </section>
@@ -2193,7 +2194,7 @@ button.mg{background:none;border:0;padding:0;font:inherit;text-align:left;
     <div class="col rv">
       <p class="hist-k">Background</p>
       <h3 style="margin-bottom:16px">A short history of your plan.</h3>
-      <p>The plan itself is new. It took effect 1 January 2024, and the 2024 return is marked as the first one filed for it. So the record is two years long, the carriers did not move inside it, and the cost did.</p>
+      <p>The plan itself is new. It took effect 1 January 2024, and 2024 is the first year reported for it. So the record is two years long, the carriers did not move inside it, and the cost did.</p>
     </div>
 
     <div class="col tl rv">
@@ -2205,7 +2206,7 @@ button.mg{background:none;border:0;padding:0;font:inherit;text-align:left;
       <div class="tl-i big">
         <p class="tl-y">2024 &ndash; 2025 &middot; the contract</p>
         <p class="tl-t">Same carrier, same contract number, both years.</p>
-        <p class="tl-p">The medical line sits on BlueCross contract 129182 in both filings, and Bukaty Companies of Leawood, Kansas is the only name on the commission line in both. Nothing in the arrangement changed between the two years except the price.</p>
+        <p class="tl-p">The medical line sits on BlueCross contract 129182 in both years, and Bukaty Companies of Leawood, Kansas is the only name on the commission line in both. Nothing in the arrangement changed between the two years except the price.</p>
       </div>
       <div class="tl-i">
         <p class="tl-y">2025</p>
@@ -2214,7 +2215,7 @@ button.mg{background:none;border:0;padding:0;font:inherit;text-align:left;
       </div>
       <div class="tl-i">
         <p class="tl-y">Reported compensation</p>
-        <p class="tl-t">What the filings show on the commission line.</p>
+        <p class="tl-t">What your plan data shows on the commission line.</p>
         <p class="tl-p">Bukaty Companies at $79,193 in 2024 and $86,067 in 2025, which is 6.15% and 5.93% of total premium. TechSource of Overland Park, Kansas appears in 2025 at $944 for administration.</p>
       </div>
     </div>
@@ -2229,7 +2230,7 @@ button.mg{background:none;border:0;padding:0;font:inherit;text-align:left;
     <div class="mv rv">
       <p class="mv-no">Who sent the cake</p>
       <h2>Same county. Williamson.</h2>
-      <p class="lede">Benefit Leader is in Brentwood, a few minutes north of 1650 Murfreesboro Road. We work the same Nashville carrier market you do, with the same TDCI rate filings and the same national carriers. This outreach was deliberate. We read your filings first, and we sent a cake because a cold email would have been worse.</p>
+      <p class="lede">Benefit Leader is in Brentwood, a few minutes north of 1650 Murfreesboro Road. We work the same Nashville carrier market you do, with the same TDCI rate filings and the same national carriers. This outreach was deliberate. We read your numbers first, and we sent a cake because a cold email would have been worse.</p>
     </div>
 
     <div class="col rv">
@@ -3623,7 +3624,7 @@ var CONFIG = {
       lo:     9000,
       hi:     22000
     },
-    /* ---- trend mode. Health-line premium over participants, filed years. ---- */
+    /* ---- trend mode. Health-line premium over participants, reported years. ---- */
     trend: {
       years:  [2024, 2025],
       you:    [10823, 11722],
@@ -3747,8 +3748,8 @@ function opener(){
   cost.forEach(function(v,i){ g.appendChild(mk("circle", { cx:x(i), cy:yc(v), r:4.4, "class":"opd cost" })); });
   heads.forEach(function(v,i){ g.appendChild(mk("circle", { cx:x(i), cy:yh(v), r:3.6, "class":"opd head" })); });
 
-  g.appendChild(mk("text", { x:L, y:T-13, "class":"opt cost" }, "COST PER PARTICIPANT"));
-  g.appendChild(mk("text", { x:W-R, y:yh(heads[0])+22, "class":"opt head", "text-anchor":"end" }, "PEOPLE COVERED"));
+  g.appendChild(mk("text", { x:L, y:T-10, "class":"opt cost" }, "COST PER PARTICIPANT"));
+  g.appendChild(mk("text", { x:W-R, y:yh(heads[0])-12, "class":"opt head", "text-anchor":"end" }, "PEOPLE COVERED"));
   g.appendChild(mk("text", { x:L, y:H-8, "class":"opy" }, years[0]));
   g.appendChild(mk("text", { x:W-R, y:H-8, "class":"opy", "text-anchor":"end" }, years[years.length-1]));
 
@@ -3757,7 +3758,7 @@ function opener(){
 }
 
 /* ============================================================
-   THE CRESCENDO CHART — their real filed years
+   THE CRESCENDO CHART — their real reported years
    ============================================================ */
 var YEARS = [
   { y:2024, prem:1244657, emp:115 },
@@ -3768,11 +3769,14 @@ function crescendo(){
   var g = $("#chart"), read = $("#read");
   if(!g) return;
 
-  var W = 760, H = 320, L = 58, R = 26, T = 26, B = 52;
+  var narrow = innerWidth < 640;
+  /* franja propia arriba para la línea de participantes, y margen
+     izquierdo mayor en móvil porque las etiquetas del eje crecen */
+  var W = 760, H = 382, L = narrow ? 96 : 58, R = 26, T = 90, B = 52;
   var iw = W - L - R, ih = H - T - B;
   var maxP = 1760000;
   var eLo = 105, eHi = 130;
-  var eTop = 22, eBot = 58;
+  var eTop = 34, eBot = 66;
   var bw = iw / YEARS.length * 0.46;
 
   function cx(i){ return L + iw / YEARS.length * (i + 0.5); }
@@ -3793,8 +3797,10 @@ function crescendo(){
     grp.appendChild(mk("rect", {
       x:cx(i)-bw/2, y:py(d.prem), width:bw, height:h, fill:"#D9A32B", rx:1
     }));
+    /* el importe va dentro de la barra: encima chocaba con la etiqueta
+       de participantes cuando el punto quedaba a esa altura */
     grp.appendChild(mk("text", {
-      x:cx(i), y:py(d.prem)-9, "class":"cval", "text-anchor":"middle"
+      x:cx(i), y:py(d.prem) + 20, "class":"cval inbar", "text-anchor":"middle"
     }, "$" + (d.prem/1000000).toFixed(2) + "M"));
     grp.appendChild(mk("text", {
       x:cx(i), y:H-B+22, "class":"cyr", "text-anchor":"middle"
@@ -4128,10 +4134,10 @@ function hookTrend(){
   var B = CONFIG.bench.trend;
   var narrow = innerWidth < 640;
 
-  /* filed years, then the projection. The rates are not new data: each is the
+  /* reported years, then the projection. The rates are not new data: each is the
      year-over-year rate already drawn on the chart, carried forward. The
      projected tail is dashed with hollow markers so it can never read as
-     filed. Set PROJ to 0 to show filed years only.
+     reported data. Set PROJ to 0 to show reported years only.
      This runs before the dimensions because a projection adds a second callout
      row under the year axis, and the viewBox has to make room for it. */
   var PROJ = 2;
@@ -4151,9 +4157,9 @@ function hookTrend(){
 
   /* extra bottom margin for the second callout row. Grown on both H and Bt so
      the plot area itself is unchanged. */
-  var extra = proj ? (narrow ? 46 : 24) : 0;
+  var extra = proj ? (narrow ? 124 : 24) : 0;
   var W = 760, H = (narrow ? 440 : 380) + extra;
-  var L = narrow ? 56 : 64, R = narrow ? 20 : 150, T = 54, Bt = 62 + extra;
+  var L = narrow ? 84 : 64, R = narrow ? 20 : 150, T = 54, Bt = 62 + extra;
   var iw = W - L - R, ih = H - T - Bt;
   var svg = $("#bellSvg");
   if(svg) svg.setAttribute("viewBox", "0 0 " + W + " " + H);
@@ -4187,7 +4193,7 @@ function hookTrend(){
       "stroke-width":"2", "stroke-dasharray":"3 6", "stroke-linecap":"round", opacity:".72" }));
     g.appendChild(mk("path", { d:seg(you, lastAct, you.length - 1), fill:"none", stroke:"#F0737C",
       "stroke-width":"3", "stroke-dasharray":"7 6", "stroke-linecap":"round", "stroke-linejoin":"round" }));
-    /* and a rule marking where the filed record stops */
+    /* and a rule marking where the reported record stops */
     g.appendChild(mk("line", { x1:x(lastAct), x2:x(lastAct), y1:T - 6, y2:T + ih,
       stroke:"currentColor", "stroke-width":"1", "stroke-dasharray":"2 5", opacity:".38" }));
     g.appendChild(mk("text", { x:x(lastAct) + 8, y:T + 4, "class":"blab avg", "text-anchor":"start",
@@ -4203,13 +4209,21 @@ function hookTrend(){
     g.appendChild(i < nAct
       ? mk("circle", { cx:x(i), cy:y(v), r:5, fill:"#F0737C" })
       : mk("circle", { cx:x(i), cy:y(v), r:4.8, fill:"none", stroke:"#F0737C", "stroke-width":"2" }));
-    g.appendChild(mk("text", { x:x(i), y:y(v)-14, "class":"bval you", "text-anchor":"middle",
-      opacity:i < nAct ? "1" : ".78" }, money(v)));
+    /* en móvil solo se rotulan el último año reportado y el final de la
+       proyección: los intermedios chocaban con las cifras del eje */
+    var lastPt = i === yrs.length - 1;
+    if(narrow && i !== lastAct && !lastPt) return;
+    g.appendChild(mk("text", {
+      x: x(i) + (narrow && lastPt ? -10 : 0), y: y(v) - 14, "class":"bval you",
+      "text-anchor": narrow && lastPt ? "end" : "middle",
+      opacity: i < nAct ? "1" : ".78" }, money(v)));
   });
 
   /* year axis */
   yrs.forEach(function(yr,i){
-    g.appendChild(mk("text", { x:x(i), y:T+ih+24, "class":"baxis", "text-anchor":"middle" }, yr));
+    /* los años de los extremos se anclan hacia dentro por lo mismo */
+    var aY = i === 0 ? "start" : (i === yrs.length - 1 ? "end" : "middle");
+    g.appendChild(mk("text", { x:x(i), y:T+ih+24, "class":"baxis", "text-anchor":aY }, yr));
   });
 
   /* end labels, moved under the lines on narrow screens */
@@ -4222,7 +4236,7 @@ function hookTrend(){
     g.appendChild(mk("text", { x:x(last)+12, y:y(mkt[last])+17, "class":"bval avg", "text-anchor":"start" }, money(mkt[last])));
   }
 
-  /* the gap: bracket it in the last filed year and again at the end of the
+  /* the gap: bracket it in the last reported year and again at the end of the
      projection, so the widening is the thing you read off the chart */
   function bracket(i){
     g.appendChild(mk("line", { x1:x(i), x2:x(i), y1:y(you[i]), y2:y(mkt[i]), "class":"bgap" }));
@@ -4245,24 +4259,38 @@ function hookTrend(){
   var kCum = "$" + Math.round(gapCum/1000) + "K";
 
   /* rows sit below the year axis, which is at T+ih+24 */
+  /* en móvil cada pie ocupa dos renglones: en uno solo se salían por
+     la derecha con el texto grande */
   var row1 = T + ih + (narrow ? 54 : 48);
-  var row2 = T + ih + (narrow ? 80 : 66);
+  var row1b = row1 + 28;
+  var row2 = T + ih + (narrow ? 118 : 66);
+  var row2b = row2 + 28;
 
-  g.appendChild(mk("text", { x:L, y:row1, "class":"blab you", "text-anchor":"start" },
-    narrow
-      ? dot + yrs[lastAct] + " FILED" + sep + perAct + " EACH" + sep + kAct + " A YEAR"
-      : dot + yrs[lastAct] + ", FILED" + sep + perAct + " ABOVE MARKET TREND PER PARTICIPANT" +
-        sep + kAct + " A YEAR"));
+  if(narrow){
+    g.appendChild(mk("text", { x:L, y:row1, "class":"blab you", "text-anchor":"start" },
+      dot + yrs[lastAct] + " REPORTED"));
+    g.appendChild(mk("text", { x:L, y:row1b, "class":"blab you", "text-anchor":"start" },
+      perAct + " EACH" + sep + kAct + " A YEAR"));
+  } else {
+    g.appendChild(mk("text", { x:L, y:row1, "class":"blab you", "text-anchor":"start" },
+      dot + yrs[lastAct] + ", REPORTED" + sep + perAct + " ABOVE MARKET TREND PER PARTICIPANT" +
+      sep + kAct + " A YEAR"));
+  }
   if(proj){
-    g.appendChild(mk("text", { x:L, y:row2, "class":"blab avg", "text-anchor":"start" },
-      narrow
-        ? dot + yrs[last] + " PROJECTED" + sep + perEnd + " EACH" + sep + kCum + " CUMULATIVE"
-        : dot + yrs[last] + ", PROJECTED" + sep + perEnd + " PER PARTICIPANT" + sep +
-          kEnd + " A YEAR" + sep + kCum + " CUMULATIVE"));
+    if(narrow){
+      g.appendChild(mk("text", { x:L, y:row2, "class":"blab avg", "text-anchor":"start" },
+        dot + yrs[last] + " PROJECTED"));
+      g.appendChild(mk("text", { x:L, y:row2b, "class":"blab avg", "text-anchor":"start" },
+        perEnd + " EACH" + sep + kCum + " CUMULATIVE"));
+    } else {
+      g.appendChild(mk("text", { x:L, y:row2, "class":"blab avg", "text-anchor":"start" },
+        dot + yrs[last] + ", PROJECTED" + sep + perEnd + " PER PARTICIPANT" + sep +
+        kEnd + " A YEAR" + sep + kCum + " CUMULATIVE"));
+    }
   }
 
   /* legend under the chart, and the same three figures in section 5. These read
-     off the last FILED year. Never the projection: everything in section 5 is a
+     off the last REPORTED year. Never the projection: everything in section 5 is a
      statement about where they actually stand today. */
   fillFigures({
     bkYou: money(you[lastAct]), bkAvg: money(mkt[lastAct]),
@@ -4283,7 +4311,9 @@ function trendChart(sel, series, fmt, opts){
   var g = $(sel);
   if(!g) return;
   opts = opts || {};
-  var W = 760, H = 300, L = 72, R = 46, T = 40, B = 50;
+  var narrow = innerWidth < 640;
+  /* "$2.9k" a 24px no cabe en el margen de 72 */
+  var W = 760, H = 300, L = narrow ? 108 : 72, R = 46, T = 40, B = 50;
   var iw = W - L - R, ih = H - T - B;
   var pad = 26;
   var xs = series.map(function(p){ return p.x; });
